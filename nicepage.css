@@ -280,7 +280,7 @@
         text-align: center; }
   .fr-view button.fr-rounded, .fr-view input.fr-rounded, .fr-view textarea.fr-rounded {
     border-radius: 10px;
-    -moz-border-radius: 10px;
+    -moz-border-radius: 110px;
     -webkit-border-radius: 10px;
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
@@ -289,6 +289,44 @@
     font-size: 24px; }
   .fr-view ul, .fr-view ol {
     list-style-position: inside; }
+
+.button {
+  text-decoration:none;
+  color:#FFF;
+}
+
+
+.rainbow-button {
+	width:calc(20vw + 6px);
+  height:calc(8vw + 6px);
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  font-size:3vw;
+  font-weight:bold;
+
+}
+
+.rainbow-button:after {
+  content:attr(alt);
+  width:20vw;
+  height:8vw;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.rainbow-button:hover {
+  animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
 
 /**
  * Image style.
@@ -14202,37 +14240,37 @@ section.u-image,
   object-fit: cover;
 }
 .u-video.u-video-contain video {
-  object-fit: contain;
-  background-size: contain;
+  object-fit: cover;
+  background-size: cover;
 }
 @media (min-width: 1200px) {
   .u-video.u-video-contain video-xl {
-    object-fit: contain;
-    background-size: contain;
+    object-fit: cover;
+    background-size: cover;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .u-video.u-video-contain video-lg {
-    object-fit: contain;
-    background-size: contain;
+    object-fit: cover;
+    background-size: cover;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .u-video.u-video-contain video-md {
-    object-fit: contain;
-    background-size: contain;
+    object-fit: cover;
+    background-size: cover;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .u-video.u-video-contain video-sm {
-    object-fit: contain;
-    background-size: contain;
+    object-fit: cover;
+    background-size: cover;
   }
 }
 @media (max-width: 575px) {
   .u-video.u-video-contain video-xs {
-    object-fit: contain;
-    background-size: contain;
+    object-fit: cover;
+    background-size: cover;
   }
 }
 div.u-video,
